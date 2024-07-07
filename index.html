@@ -4,52 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Modpack Information</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
+        <div style="height: 100px;"></div>
         <ul>
             <li><a href="#intro">Introduction</a></li>
             <li><a href="#modlist">Mod List</a></li>
             <li><a href="#details">Details</a></li>
+            <li><a href="#impressum">Impressum</a></li>
         </ul>
     </div>
+    <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+        &#9776;
+    </div>
     <div class="content">
-        <div id="intro">
-            <img src="placeholder.png" alt="Artwork" class="artwork">
-            <h1>Welcome to the Minecraft Modpack</h1>
-            <p>This modpack offers a unique blend of mods that enhance gameplay with new adventures, challenges, and tools.</p>
+        <div id="intro" class="section">
+            <h1 onclick="toggleSection('introContent')">
+                <span class="toggle-icon" id="introIcon">▼</span> Welcome to the Minecraft Modpack
+            </h1>
+            <div id="introContent" class="section-content">
+                <img src="placeholder.png" alt="Artwork" class="artwork">
+                <p>This modpack offers a unique blend of mods that enhance gameplay with new adventures, challenges, and tools.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed vehicula, leo vel suscipit placerat, nisi mi volutpat orci, et pharetra nulla ipsum ac odio.</p>
+                <img src="placeholder.png" alt="Placeholder Image" class="placeholder">
+            </div>
         </div>
-        <div id="modlist">
-            <h2>Mod List</h2>
-            <table id="modTable">
-                <thead>
-                    <tr>
-                        <th onclick="sortTable(0)">Mod Name</th>
-                        <th onclick="sortTable(1)">Version</th>
-                        <th onclick="sortTable(2)">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Example Mod Entries -->
-                    <tr>
-                        <td>Mod A</td>
-                        <td>1.0</td>
-                        <td>Enhances mining</td>
-                    </tr>
-                    <tr>
-                        <td>Mod B</td>
-                        <td>2.1</td>
-                        <td>Adds new biomes</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="modlist" class="section">
+            <h2 onclick="toggleSection('modlistContent')">
+                <span class="toggle-icon" id="modlistIcon">▼</span> Mod List
+            </h2>
+            <div id="modlistContent" class="section-content">
+                <table id="modTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Mod Name</th>
+                            <th onclick="sortTable(1)">Version</th>
+                            <th onclick="sortTable(2)">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Mod Entries -->
+                        <tr>
+                            <td>Mod A</td>
+                            <td>1.0</td>
+                            <td>Enhances mining</td>
+                        </tr>
+                        <tr>
+                            <td>Mod B</td>
+                            <td>2.1</td>
+                            <td>Adds new biomes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div id="details">
-            <h2>Details</h2>
-            <p>Here you will find more detailed information about the mods and their features.</p>
+        <div id="details" class="section">
+            <h2 onclick="toggleSection('detailsContent')">
+                <span class="toggle-icon" id="detailsIcon">▼</span> Details
+            </h2>
+            <div id="detailsContent" class="section-content">
+                <p>Here you will find more detailed information about the mods and their features.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed vehicula, leo vel suscipit placerat, nisi mi volutpat orci, et pharetra nulla ipsum ac odio.</p>
+                <img src="placeholder.png" alt="Placeholder Image" class="placeholder">
+            </div>
+        </div>
+        <div id="impressum" class="section">
+            <h2 onclick="toggleSection('impressumContent')">
+                <span class="toggle-icon" id="impressumIcon">▼</span> Impressum
+            </h2>
+            <div id="impressumContent" class="section-content">
+                <p>This is the Impressum section, which contains legal information about the website. Please replace this content with your own legal text as required.</p>
+            </div>
         </div>
     </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
     <script src="scripts.js"></script>
 </body>
 </html>

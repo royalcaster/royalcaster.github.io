@@ -23,3 +23,22 @@ function sortTable(columnIndex) {
         }
     }
 }
+
+function toggleMenu() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('overlay');
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+function toggleSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    var icon = document.getElementById(sectionId + 'Icon');
+    if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+        icon.innerHTML = "▼";
+    } else {
+        section.style.display = "none";
+        icon.innerHTML = "►";
+    }
+}
