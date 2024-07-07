@@ -1,7 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Modpack Information</title>
+    <link rel="stylesheet" href="index.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#modlist">Mod List</a></li>
+            <li><a href="#details">Details</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="intro">
+            <img src="placeholder.png" alt="Artwork" class="artwork">
+            <h1>Welcome to the Minecraft Modpack</h1>
+            <p>This modpack offers a unique blend of mods that enhance gameplay with new adventures, challenges, and tools.</p>
+        </div>
+        <div id="modlist">
+            <h2>Mod List</h2>
+            <table id="modTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Mod Name</th>
+                        <th onclick="sortTable(1)">Version</th>
+                        <th onclick="sortTable(2)">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Mod Entries -->
+                    <tr>
+                        <td>Mod A</td>
+                        <td>1.0</td>
+                        <td>Enhances mining</td>
+                    </tr>
+                    <tr>
+                        <td>Mod B</td>
+                        <td>2.1</td>
+                        <td>Adds new biomes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="details">
+            <h2>Details</h2>
+            <p>Here you will find more detailed information about the mods and their features.</p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
