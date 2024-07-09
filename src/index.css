@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #161b22;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #c9d1d9;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-left: 240px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.content .section {
+  margin: 20px 0;
+}
+
+.artwork {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #30363d;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #21262d;
+}
+
+h1, h2 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+h1:hover, h2:hover {
+  color: #58a6ff;
+}
+
+.toggle-icon {
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+h1:hover .toggle-icon, h2:hover .toggle-icon {
+  color: #58a6ff;
+}
+
+.section-content {
+  margin-top: 10px;
+}
+
+.placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #30363d;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      transform: translateX(-100%);
+  }
+  .menu-icon {
+      display: block;
+  }
+  .overlay {
+      display: block;
+      visibility: hidden;
+  }
+  .sidebar.active {
+      transform: translateX(0);
+  }
+  .overlay.active {
+      visibility: visible;
+  }
+  .content {
+      margin-left: 0;
+      padding: 20px;
+  }
+}
