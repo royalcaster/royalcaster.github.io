@@ -3,7 +3,7 @@ import React from 'react';
 const Sidebar = () => {
     return (
         <div className="sidebar" id="sidebar">
-            <div style={{ height: '100px' }}></div>
+            <h2>Content</h2>
             <ul>
                 <li><a href="#intro">Introduction</a></li>
                 <li><a href="#modlist">Mod List</a></li>

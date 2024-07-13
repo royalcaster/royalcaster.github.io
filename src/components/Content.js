@@ -4,6 +4,9 @@ import Section from './Section';
 const Content = () => {
     return (
         <div className="content">
+
+            <img src={require("../img/logo.png")} style={{width: "8em", height: "auto"}}></img>
+
             <Section id="intro" title="Welcome to the Minecraft Modpack">
                 <img src="placeholder.png" alt="Artwork" className="artwork" />
                 <p>This modpack offers a unique blend of mods that enhance gameplay with new adventures, challenges, and tools.</p>

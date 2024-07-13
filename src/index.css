@@ -1,20 +1,63 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   background-color: #0d1117;
   color: #c9d1d9;
   display: flex;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+a {
+  color: #3385ff;
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .app-container {
-  width: 100vw;
-  height: 100vh;
   max-width: 1200px;
-  display: block;
-  margin: auto;
+  width: 100%;
+  padding: 1em
 }
 
 .navbar {
-  height: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+/* Default link style */
+.nav-link {
+  color: rgba(255, 255, 255, 0.664);
+  text-decoration: none;
+  margin: 0.5em;
+  font-size: 1.25em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.664);
+  padding: 10px
+}
+
+.nav-link:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+/* Active link style */
+.nav-link-active {
+  color: #3385ff;
+  border-bottom: 1px solid #3385ff;
+}
+
+.nav-link-active:hover {
+  color: #3385ff;
+  border-bottom: 1px solid #3385ff;
 }
 
 .sidebar {
@@ -22,10 +65,10 @@ body {
   background-color: #161b22;
   padding: 20px;
   position: fixed;
-  height: 100%;
   overflow: auto;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
+  border-radius: 15px;
 }
 
 .menu-icon {
