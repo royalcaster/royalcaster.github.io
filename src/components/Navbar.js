@@ -1,14 +1,39 @@
-import { NavLink } from 'react-router-dom';
+import NavbarCanvas from './NavbarCanvas';
+import NavBarItem from './NavBarItem';
+import { useState } from 'react';
 
-// Example of using Link in a component
-function Navbar() {
+const Navbar = () => {
+
+    const [hoveredItem, setHoveredItem] = useState(null);
+
     return (
-        <nav className='navbar'>
-            <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>Home</NavLink>
-            <NavLink to="/minecraft-clash" className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
-                Minecraft Clash
-            </NavLink>
-        </nav>
+        <div className='navbar-wrapper'>
+            <nav className='navbar'>
+                <NavBarItem 
+                    title='Über mich'
+                    route='/homepage'
+                    image={require('../img/mc.webp')}
+                    description={"Informationen, Kontakt und Lebenslauf"}
+                    onHover={() => setHoveredItem('homepage')}
+                />
+                <NavBarItem 
+                    title='Minecraft Clash'
+                    route='/minecraft-clash'
+                    image={require('../img/logo.png')}
+                    description={"Mein eigenes Minecraft-Modpack"}
+                    onHover={() => setHoveredItem('minecraft-clash')}
+                />
+                <NavBarItem 
+                    title='DnD Material'
+                    route='/dnd'
+                    image={require('../img/dnd_logo.png')}
+                    description={"Nützliches Material für meine DnD-Gruppe"}
+                    onHover={() => setHoveredItem('dnd')}
+                />
+                <NavbarCanvas type={hoveredItem}/>
+
+            </nav>
+        </div>
     );
 }
 

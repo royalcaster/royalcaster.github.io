@@ -9,11 +9,10 @@ function App() {
     return (
             <div className="app-wrapper">
                 <div className='app-container'>
-                    <Navbar />
-                    <div style={{height: "2em"}}></div>
                     <Routes>
-                        <Route path="/" element={<HomePage />} />
+                        <Route path="/" element={<Navbar />} />
                         <Route path="/minecraft-clash" element={<ModpackPage />} />
+                        <Route path="/homepage" element={<HomePage />} />
                     </Routes>
                 </div>
             </div>
